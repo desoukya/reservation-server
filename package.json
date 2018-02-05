@@ -2,10 +2,9 @@
   "name": "hilton-server",
   "author": "Amr Desouky",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "test": "mocha './**/*-test.js'",
-    "start": "node hilton-server/src/server.js"
+    "start": "node src/server.js"
   },
   "dependencies": {
     "express": "4.16.2",

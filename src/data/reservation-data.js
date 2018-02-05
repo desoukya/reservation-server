@@ -1,13 +1,14 @@
 'use strict';
 
 const db = require('./db');
+const ObjectID = require('mongodb').ObjectID;
 
 async function getAllReservations() {
   return await db.getDb().collection('reservations').find().toArray();
 }
 
-async function getSingleReservation(_id) {
-  return await db.getDb().collection('reservations').findOne({_id});
+async function getSingleReservation(id) {
+  return await db.getDb().collection('reservations').findOne({_id: ObjectID(`${id}`)});
 }
 
 async function createReservation(reservation) {

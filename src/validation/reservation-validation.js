@@ -7,7 +7,6 @@ var reservationValidation = {
   * @return null if validation passes otherwise a validation error
   */
   createReservation(reservation) {
-    console.log('validation createReservation =>', reservation);
     var schema = Joi.object().keys({
       name: Joi.string().required(),
       hotelName: Joi.string().required(),
